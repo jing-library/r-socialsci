@@ -31,13 +31,10 @@ source("../bin/download_data.R")
 The term "`R`" is used to refer to both the programming language and the
 software that interprets the scripts written using it.
 
-[RStudio](https://rstudio.com) is currently a very popular way to not only write
-your R scripts but also to interact with the R software. To function correctly,
-RStudio needs R and therefore both need to be installed on your computer.
-
-To make it easier to interact with R, we will use RStudio. RStudio is the most popular
-IDE (Integrated Development Environmemt) for R. An IDE is a piece of software that provides
-tools to make programming easier.
+To make it easier to interact with R, we will use [RStudio](https://rstudio.com), the most popular IDE (Integrated Development
+Environmemt) for R, to write R scripts and to interact with the R software. 
+To function correctly, RStudio needs R and therefore both need to be installed
+on your computer.
 
 
 ## Why learn R?
