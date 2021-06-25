@@ -12,7 +12,7 @@ questions:
 - "How can subsets be extracted from vectors?"
 - "How does R treat missing values?"
 - "How can we deal with missing values in R?"
-objectives: 
+objectives:
 - "Define the following terms as they relate to R: object, assign, call, function, arguments, options."
 - "Assign values to objects in R."
 - "Learn how to name objects."
@@ -79,7 +79,7 @@ be read as 3 **goes into** `x`.  For historical reasons, you can also use `=`
 for assignments, but not in every context. Because of the
 [slight](http://blog.revolutionanalytics.com/2008/12/use-equals-or-arrow-for-assignment.html)
 [differences](http://r.789695.n4.nabble.com/Is-there-any-difference-between-and-tp878594p878598.html)
-in syntax, it is good practice to always use `<-` for assignments. More 
+in syntax, it is good practice to always use `<-` for assignments. More
 generally we prefer the `<-` syntax over `=` because it makes it clear what
 direction the assignment is operating (left assignment), and it increases the
 read-ability of the code.
@@ -206,7 +206,7 @@ area_hectares <- 50
 {: .language-r}
 
 > ## Exercise
-> 
+>
 > What do you think is the current content of the object `area_acres`? 123.5 or
 > 6.175?
 >
@@ -220,9 +220,10 @@ area_hectares <- 50
 
 ## Comments
 
-All programming languages allow the programmer to include comments in their code. To do this in R we use the `#` character.
-Anything to the right of the `#` sign and up to the end of the line is treated as a comment and is ignored by R. You can start lines with comments
-or include them after any code on the line.
+All programming languages allow the programmer to include comments in their code.
+To do this in R we use the `#` character. Anything to the right of the `#` sign
+and up to the end of the line is treated as a comment and is ignored by R. You
+can start lines with comments or include them after any code on the line.
 
 
 ~~~
@@ -252,10 +253,10 @@ to select the whole line), then press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> +
 > Create two variables `length` and `width` and assign them values. It should be noted that, because `length` and `width` are built-in R functions, R Studio might add "()" after length and width and if you leave the parentheses you will get unexpected results. This is why you might see other programmers abbreviate common words.
 > Create a third variable `area` and give it a value based on the current values of `length` and `width`.
 > Show that changing the values of either `length` and `width` does not affect the value of `area`.
-> 
+>
 > > ## Solution
-> > 
-> > 
+> >
+> >
 > > ~~~
 > > length <- 2.5
 > > width <- 3.2
@@ -263,16 +264,16 @@ to select the whole line), then press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> +
 > > area
 > > ~~~
 > > {: .language-r}
-> > 
-> > 
-> > 
+> >
+> >
+> >
 > > ~~~
 > > [1] 8
 > > ~~~
 > > {: .output}
-> > 
-> > 
-> > 
+> >
+> >
+> >
 > > ~~~
 > > # change the values of length and width
 > > length <- 7.0
@@ -281,14 +282,14 @@ to select the whole line), then press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> +
 > > area
 > > ~~~
 > > {: .language-r}
-> > 
-> > 
-> > 
+> >
+> >
+> >
 > > ~~~
 > > [1] 8
 > > ~~~
 > > {: .output}
-> > 
+> >
 > {: .solution}
 {: .challenge}
 
@@ -357,7 +358,7 @@ args(round)
 
 
 ~~~
-function (x, digits = 0) 
+function (x, digits = 0)
 NULL
 ~~~
 {: .output}
@@ -432,7 +433,7 @@ doing.
 
 
 
-A vector is the most common and basic data type in R, and is pretty much
+A vector is the most common and basic data structure in R, and is pretty much
 the workhorse of R. A vector is composed by a series of values, which can be
 either numbers or characters. We can assign a series of values to a vector using
 the `c()` function. For example we can create a vector of the number of household
@@ -472,8 +473,8 @@ respondent_wall_type
 {: .output}
 
 The quotes around "muddaub", etc. are essential here. Without the quotes R
-will assume there are objects called `muddaub`, `burntbricks` and `sunbricks`. As these objects
-don't exist in R's memory, there will be an error message.
+will assume there are objects called `muddaub`, `burntbricks` and `sunbricks`.
+As these objects don't exist in R's memory, there will be an error message.
 
 There are many functions that allow you to inspect the content of a
 vector. `length()` tells you how many elements are in a particular vector:
@@ -592,10 +593,10 @@ We can do this over and over again to grow a vector, or assemble a dataset.
 As we program, this may be useful to add results that we are collecting or
 calculating.
 
-An **atomic vector** is the simplest R **data type** and is a linear vector of a single type. Above, we saw
-2 of the 6 main **atomic vector** types  that R
-uses: `"character"` and `"numeric"` (or `"double"`). These are the basic building blocks that
-all R objects are built from. The other 4 **atomic vector** types are:
+An **atomic vector** is the simplest R **data structure** and is a linear vector of
+a single type. Above, we saw 2 of the 6 main **atomic vector** types  that R
+uses: `"character"` and `"numeric"` (or `"double"`). These are the basic building
+blocks that all R objects are built from. The other 4 **atomic vector** types are:
 
 * `"logical"` for `TRUE` and `FALSE` (the boolean data type)
 * `"integer"` for integer numbers (e.g., `2L`, the `L` indicates to R that it's an integer)
@@ -647,7 +648,7 @@ factors (`factor`) and arrays (`array`).
 > How many values in `combined_logical` are `"TRUE"` (as a character) in the
 > following example:
 >
-> 
+>
 > ~~~
 > num_logical <- c(1, 2, 3, TRUE)
 > char_logical <- c("a", "b", "c", TRUE)
@@ -822,7 +823,7 @@ to `<-`).
 
 A common task is to search for certain strings in a vector.  One could use the
 "or" operator `|` to test for equality to multiple values, but this can quickly
-become tedious. 
+become tedious.
 
 
 ~~~
@@ -1036,7 +1037,7 @@ Recall that you can use the `typeof()` function to find the type of your atomic 
 > 3. Use R to figure out how many households in the set use more than 2 rooms for sleeping.
 >
 > > ## Solution
-> > 
+> >
 > > ~~~
 > > rooms <- c(1, 2, 1, 1, NA, 3, 1, 3, 2, 1, 1, 8, 3, 1, NA, 1)
 > > rooms_no_na <- rooms[!is.na(rooms)]
@@ -1046,25 +1047,25 @@ Recall that you can use the `typeof()` function to find the type of your atomic 
 > > median(rooms, na.rm = TRUE)
 > > ~~~
 > > {: .language-r}
-> > 
-> > 
-> > 
+> >
+> >
+> >
 > > ~~~
 > > [1] 1
 > > ~~~
 > > {: .output}
-> > 
-> > 
-> > 
+> >
+> >
+> >
 > > ~~~
 > > # 3.
 > > rooms_above_2 <- rooms_no_na[rooms_no_na > 2]
 > > length(rooms_above_2)
 > > ~~~
 > > {: .language-r}
-> > 
-> > 
-> > 
+> >
+> >
+> >
 > > ~~~
 > > [1] 4
 > > ~~~
