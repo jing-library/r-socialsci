@@ -30,7 +30,7 @@ The term "`R`" is used to refer to both the programming language and the
 software that interprets the scripts written using it.
 
 To make it easier to interact with R, we will use [RStudio](https://rstudio.com),
-the most popular IDE (Integrated Development Environmemt) for R, to write R
+the most popular IDE (Integrated Development Environment) for R, to write R
 scripts and to interact with the R software. To function correctly, RStudio
 needs R and therefore both need to be installed on your computer.
 
