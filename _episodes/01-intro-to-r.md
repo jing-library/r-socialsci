@@ -595,8 +595,8 @@ calculating.
 
 An **atomic vector** is the simplest R **data structure** and is a linear vector of
 a single type. Above, we saw 2 of the 6 main **atomic vector** types  that R
-uses: `"character"` and `"numeric"` (or `"double"`). These are the basic building
-blocks that all R objects are built from. The other 4 **atomic vector** types are:
+uses: `"character"` and `"double"`. These are the basic building blocks that
+all R objects are built from. The other 4 **atomic vector** types are:
 
 * `"logical"` for `TRUE` and `FALSE` (the boolean data type)
 * `"integer"` for integer numbers (e.g., `2L`, the `L` indicates to R that it's an integer)
@@ -613,7 +613,7 @@ factors (`factor`) and arrays (`array`).
 > ## Exercise
 >
 >
-> We’ve seen that atomic vectors can be of type character, numeric (or double),
+> We’ve seen that atomic vectors can be of type character, double,
 >   integer, and logical. But what happens if we try to mix these types in a
 >   single vector?
 >
@@ -622,7 +622,7 @@ factors (`factor`) and arrays (`array`).
 > > R implicitly converts them to all be the same type.
 > {: .solution}
 >
-> What will happen in each of these examples? (hint: use `class()`
+> What will happen in each of these examples? (hint: use `typeof()`
 > to check the data type of your objects):
 >
 >  
