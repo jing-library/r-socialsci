@@ -993,7 +993,7 @@ sum(is.na(rooms))
 
 
 ~~~
-## Returns the object with incomplete cases removed. The returned object is an atomic vector of type `"numeric"` (or `"double"`).
+## Returns the object with incomplete cases removed. The returned object is an atomic vector of type `"double"`.
 na.omit(rooms)
 ~~~
 {: .language-r}
@@ -1012,7 +1012,7 @@ attr(,"class")
 
 
 ~~~
-## Extract those elements which are complete cases. The returned object is an atomic vector of type `"numeric"` (or `"double"`).
+## Extract those elements which are complete cases. The returned object is an atomic vector of type `"double"`.
 rooms[complete.cases(rooms)]
 ~~~
 {: .language-r}
@@ -1043,6 +1043,8 @@ Recall that you can use the `typeof()` function to find the type of your atomic 
 > > rooms_no_na <- rooms[!is.na(rooms)]
 > > # or
 > > rooms_no_na <- na.omit(rooms)
+> > # or
+> > rooms_no_na <- rooms[complete.cases(rooms)]
 > > # 2.
 > > median(rooms, na.rm = TRUE)
 > > ~~~
