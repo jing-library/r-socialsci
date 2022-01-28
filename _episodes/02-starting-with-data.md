@@ -135,7 +135,7 @@ interviews
 
 
 ~~~
-# A tibble: 131 x 14
+# A tibble: 131 × 14
    key_ID village interview_date      no_membrs years_liv respondent_wall… rooms
     <dbl> <chr>   <dttm>                  <dbl>     <dbl> <chr>            <dbl>
  1      1 God     2016-11-17 00:00:00         3         4 muddaub              1
@@ -253,7 +253,7 @@ interviews[1, 1]
 
 
 ~~~
-# A tibble: 1 x 1
+# A tibble: 1 × 1
   key_ID
    <dbl>
 1      1
@@ -271,7 +271,7 @@ interviews[1, 6]
 
 
 ~~~
-# A tibble: 1 x 1
+# A tibble: 1 × 1
   respondent_wall_type
   <chr>               
 1 muddaub             
@@ -311,7 +311,7 @@ interviews[1]
 
 
 ~~~
-# A tibble: 131 x 1
+# A tibble: 131 × 1
    key_ID
     <dbl>
  1      1
@@ -339,7 +339,7 @@ interviews[1:3, 7]
 
 
 ~~~
-# A tibble: 3 x 1
+# A tibble: 3 × 1
   rooms
   <dbl>
 1     1
@@ -359,7 +359,7 @@ interviews[3, ]
 
 
 ~~~
-# A tibble: 1 x 14
+# A tibble: 1 × 14
   key_ID village interview_date      no_membrs years_liv respondent_wall_… rooms
    <dbl> <chr>   <dttm>                  <dbl>     <dbl> <chr>             <dbl>
 1      3 God     2016-11-17 00:00:00        10        15 burntbricks           1
@@ -391,7 +391,7 @@ interviews[, -1]          # The whole tibble, except the first column
 
 
 ~~~
-# A tibble: 131 x 13
+# A tibble: 131 × 13
    village  interview_date      no_membrs years_liv respondent_wall_type rooms
    <chr>    <dttm>                  <dbl>     <dbl> <chr>                <dbl>
  1 God      2016-11-17 00:00:00         3         4 muddaub                  1
@@ -420,7 +420,7 @@ interviews[-c(7:131), ]   # Equivalent to head(interviews)
 
 
 ~~~
-# A tibble: 6 x 14
+# A tibble: 6 × 14
   key_ID village interview_date      no_membrs years_liv respondent_wall_… rooms
    <dbl> <chr>   <dttm>                  <dbl>     <dbl> <chr>             <dbl>
 1      1 God     2016-11-17 00:00:00         3         4 muddaub               1
@@ -931,7 +931,7 @@ interviews
 
 
 ~~~
-# A tibble: 131 x 17
+# A tibble: 131 × 17
    key_ID village interview_date      no_membrs years_liv respondent_wall… rooms
     <dbl> <chr>   <dttm>                  <dbl>     <dbl> <chr>            <dbl>
  1      1 God     2016-11-17 00:00:00         3         4 muddaub              1
