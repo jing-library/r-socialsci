@@ -818,7 +818,7 @@ number of items, so each average is grouped by village.
 
 ```{r, purl = FALSE}
 interviews_items_owned %>%
-    mutate(number_items = rowSums(select(., bicycle:car))) %>%
+    mutate(number_items = rowSums(select(., bicycle:car, -no_items_owned))) %>%
     group_by(village) %>%
     summarize(mean_items = mean(number_items))
 ```
@@ -897,7 +897,7 @@ interviews_plotting <- interviews %>%
               values_fill = list(months_lack_food_logical = FALSE)) %>%
   ## add some summary columns
   mutate(number_months_lack_food = rowSums(select(., Jan:May))) %>%
-  mutate(number_items = rowSums(select(., bicycle:car)))
+  mutate(number_items = rowSums(select(., bicycle:car, -no_items_owned)))
 ```
 
 Now we can save this dataframe to our `data_output` directory.
