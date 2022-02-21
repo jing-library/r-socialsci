@@ -320,14 +320,6 @@ length(hh_members)
 length(respondent_wall_type)
 ```
 
-An important feature of a vector, is that all of the elements are the same type of data.
-The function `class()` indicates the class (the type of element) of an object:
-
-```{r, purl=FALSE}
-class(hh_members)
-class(respondent_wall_type)
-```
-
 The function `str()` provides an overview of the structure of an object and its
 elements. It is a useful function when working with large and complex
 objects:

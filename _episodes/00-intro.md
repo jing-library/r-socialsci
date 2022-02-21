@@ -29,18 +29,17 @@ source: Rmd
 The term "`R`" is used to refer to both the programming language and the
 software that interprets the scripts written using it.
 
-To make it easier to interact with R, we will use [RStudio](https://rstudio.com),
-the most popular IDE (Integrated Development Environment) for R, to write R
-scripts and to interact with the R software. To function correctly, RStudio
-needs R and therefore both need to be installed on your computer.
+To make it easier to interact with R, we will use [RStudio](https://rstudio.com), the most popular IDE (Integrated Development
+Environmemt) for R, to write R scripts and to interact with the R software. 
+To function correctly, RStudio needs R and therefore both need to be installed
+on your computer.
 
 
 ## Why learn R?
 
 ### R does not involve lots of pointing and clicking, and that's a good thing
 
-The learning curve might be steeper than with other software, but with R, the
-results of your analysis do not rely on remembering a succession of pointing
+The learning curve might be steeper than with other software, but with R, the results of your analysis do not rely on remembering a succession of pointing
 and clicking, but instead on a series of written commands, and that's a good
 thing! So, if you want to redo your analysis because you collected more data,
 you don't have to remember which button you clicked in which order to obtain

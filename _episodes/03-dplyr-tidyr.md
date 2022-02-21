@@ -86,8 +86,8 @@ To easily access the documentation for a package within R or RStudio, use
 `help(package = "package_name")`.
 
 To learn more about **`dplyr`** and **`tidyr`** after the workshop, you may want
-to check out this [handy data transformation with **`dplyr`** cheatsheet](https://github.com/rstudio/cheatsheets/raw/master/data-transformation.pdf)
-and this [one about **`tidyr`**](https://github.com/rstudio/cheatsheets/raw/master/data-import.pdf).
+to check out this [data transformation with **`dplyr`** cheatsheet](https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-transformation.pdf)
+and this [one about **`tidyr`**](https://raw.githubusercontent.com/rstudio/cheatsheets/main/tidyr.pdf).
 
 ## Learning **`dplyr`** and **`tidyr`**
 
@@ -149,7 +149,7 @@ filter(interviews, village == "Chirodzo")
 
 
 ~~~
-# A tibble: 39 x 14
+# A tibble: 39 × 14
    key_ID village interview_date      no_membrs years_liv respondent_wall… rooms
     <dbl> <chr>   <dttm>                  <dbl>     <dbl> <chr>            <dbl>
  1      8 Chirod… 2016-11-16 00:00:00        12        70 burntbricks          3
@@ -188,7 +188,7 @@ filter(interviews, village == "Chirodzo",
 
 
 ~~~
-# A tibble: 10 x 14
+# A tibble: 10 × 14
    key_ID village interview_date      no_membrs years_liv respondent_wall… rooms
     <dbl> <chr>   <dttm>                  <dbl>     <dbl> <chr>            <dbl>
  1     10 Chirod… 2016-12-16 00:00:00        12        23 burntbricks          5
@@ -222,7 +222,7 @@ filter(interviews, village == "Chirodzo" &
 
 
 ~~~
-# A tibble: 10 x 14
+# A tibble: 10 × 14
    key_ID village interview_date      no_membrs years_liv respondent_wall… rooms
     <dbl> <chr>   <dttm>                  <dbl>     <dbl> <chr>            <dbl>
  1     10 Chirod… 2016-12-16 00:00:00        12        23 burntbricks          5
@@ -255,7 +255,7 @@ filter(interviews, village == "Chirodzo" | village == "Ruaca")
 
 
 ~~~
-# A tibble: 88 x 14
+# A tibble: 88 × 14
    key_ID village interview_date      no_membrs years_liv respondent_wall… rooms
     <dbl> <chr>   <dttm>                  <dbl>     <dbl> <chr>            <dbl>
  1      8 Chirod… 2016-11-16 00:00:00        12        70 burntbricks          3
@@ -326,7 +326,7 @@ interviews %>%
 
 
 ~~~
-# A tibble: 39 x 5
+# A tibble: 39 × 5
    village  interview_date      no_membrs years_liv respondent_wall_type
    <chr>    <dttm>                  <dbl>     <dbl> <chr>               
  1 Chirodzo 2016-11-16 00:00:00        12        70 burntbricks         
@@ -373,7 +373,7 @@ interviews_ch
 
 
 ~~~
-# A tibble: 39 x 5
+# A tibble: 39 × 5
    village  interview_date      no_membrs years_liv respondent_wall_type
    <chr>    <dttm>                  <dbl>     <dbl> <chr>               
  1 Chirodzo 2016-11-16 00:00:00        12        70 burntbricks         
@@ -413,7 +413,7 @@ expression.
 > > 
 > > 
 > > ~~~
-> > # A tibble: 33 x 3
+> > # A tibble: 33 × 3
 > >    affect_conflicts liv_count no_meals
 > >    <chr>                <dbl>    <dbl>
 > >  1 once                     3        2
@@ -451,7 +451,7 @@ interviews %>%
 
 
 ~~~
-# A tibble: 131 x 15
+# A tibble: 131 × 15
    key_ID village interview_date      no_membrs years_liv respondent_wall… rooms
     <dbl> <chr>   <dttm>                  <dbl>     <dbl> <chr>            <dbl>
  1      1 God     2016-11-17 00:00:00         3         4 muddaub              1
@@ -490,7 +490,7 @@ interviews %>%
 
 
 ~~~
-# A tibble: 92 x 15
+# A tibble: 92 × 15
    key_ID village interview_date      no_membrs years_liv respondent_wall… rooms
     <dbl> <chr>   <dttm>                  <dbl>     <dbl> <chr>            <dbl>
  1      1 God     2016-11-17 00:00:00         7         9 muddaub              1
@@ -566,7 +566,7 @@ interviews %>%
 
 
 ~~~
-# A tibble: 3 x 2
+# A tibble: 3 × 2
   village  mean_no_membrs
   <chr>             <dbl>
 1 Chirodzo           7.08
@@ -591,14 +591,15 @@ interviews %>%
 
 
 ~~~
-`summarise()` has grouped output by 'village'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'village'. You can override using the
+`.groups` argument.
 ~~~
 {: .output}
 
 
 
 ~~~
-# A tibble: 9 x 3
+# A tibble: 9 × 3
 # Groups:   village [3]
   village  memb_assoc mean_no_membrs
   <chr>    <chr>               <dbl>
@@ -629,14 +630,15 @@ interviews %>%
 
 
 ~~~
-`summarise()` has grouped output by 'village'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'village'. You can override using the
+`.groups` argument.
 ~~~
 {: .output}
 
 
 
 ~~~
-# A tibble: 9 x 3
+# A tibble: 9 × 3
   village  memb_assoc mean_no_membrs
   <chr>    <chr>               <dbl>
 1 Chirodzo no                   8.06
@@ -668,14 +670,15 @@ interviews %>%
 
 
 ~~~
-`summarise()` has grouped output by 'village'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'village'. You can override using the
+`.groups` argument.
 ~~~
 {: .output}
 
 
 
 ~~~
-# A tibble: 6 x 3
+# A tibble: 6 × 3
 # Groups:   village [3]
   village  memb_assoc mean_no_membrs
   <chr>    <chr>               <dbl>
@@ -706,14 +709,15 @@ interviews %>%
 
 
 ~~~
-`summarise()` has grouped output by 'village'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'village'. You can override using the
+`.groups` argument.
 ~~~
 {: .output}
 
 
 
 ~~~
-# A tibble: 6 x 4
+# A tibble: 6 × 4
 # Groups:   village [3]
   village  memb_assoc mean_no_membrs min_membrs
   <chr>    <chr>               <dbl>      <dbl>
@@ -745,14 +749,15 @@ interviews %>%
 
 
 ~~~
-`summarise()` has grouped output by 'village'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'village'. You can override using the
+`.groups` argument.
 ~~~
 {: .output}
 
 
 
 ~~~
-# A tibble: 6 x 4
+# A tibble: 6 × 4
 # Groups:   village [3]
   village  memb_assoc mean_no_membrs min_membrs
   <chr>    <chr>               <dbl>      <dbl>
@@ -782,14 +787,15 @@ interviews %>%
 
 
 ~~~
-`summarise()` has grouped output by 'village'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'village'. You can override using the
+`.groups` argument.
 ~~~
 {: .output}
 
 
 
 ~~~
-# A tibble: 6 x 4
+# A tibble: 6 × 4
 # Groups:   village [3]
   village  memb_assoc mean_no_membrs min_membrs
   <chr>    <chr>               <dbl>      <dbl>
@@ -819,7 +825,7 @@ interviews %>%
 
 
 ~~~
-# A tibble: 3 x 2
+# A tibble: 3 × 2
   village      n
   <chr>    <int>
 1 Chirodzo    39
@@ -841,7 +847,7 @@ interviews %>%
 
 
 ~~~
-# A tibble: 3 x 2
+# A tibble: 3 × 2
   village      n
   <chr>    <int>
 1 Ruaca       49
@@ -868,7 +874,7 @@ interviews %>%
 > > 
 > > 
 > > ~~~
-> > # A tibble: 2 x 2
+> > # A tibble: 2 × 2
 > >   no_meals     n
 > >      <dbl> <int>
 > > 1        2    52
@@ -899,7 +905,7 @@ interviews %>%
 > > 
 > > 
 > > ~~~
-> > # A tibble: 3 x 5
+> > # A tibble: 3 × 5
 > >   village  mean_no_membrs min_no_membrs max_no_membrs     n
 > >   <chr>             <dbl>         <dbl>         <dbl> <int>
 > > 1 Chirodzo           7.08             2            12    39
@@ -952,14 +958,15 @@ interviews %>%
 > > 
 > > 
 > > ~~~
-> > `summarise()` has grouped output by 'year'. You can override using the `.groups` argument.
+> > `summarise()` has grouped output by 'year'. You can override using the `.groups`
+> > argument.
 > > ~~~
 > > {: .output}
 > > 
 > > 
 > > 
 > > ~~~
-> > # A tibble: 5 x 3
+> > # A tibble: 5 × 3
 > > # Groups:   year [2]
 > >    year month max_no_membrs
 > >   <dbl> <dbl>         <dbl>
@@ -1009,7 +1016,7 @@ interviews %>%
 
 
 ~~~
-# A tibble: 131 x 4
+# A tibble: 131 × 4
    key_ID village  interview_date      instanceID                               
     <dbl> <chr>    <dttm>              <chr>                                    
  1      1 God      2016-11-17 00:00:00 uuid:ec241f2c-0609-46ed-b5e8-fe575f6cefef
@@ -1042,18 +1049,18 @@ interviews %>%
 
 
 ~~~
-# A tibble: 10 x 4
+# A tibble: 10 × 4
    key_ID village  interview_date      instanceID                               
     <dbl> <chr>    <dttm>              <chr>                                    
- 1     48 Chirodzo 2016-11-16 00:00:00 uuid:e180899c-7614-49eb-a97c-40ed013a38a2
- 2     47 Chirodzo 2016-11-17 00:00:00 uuid:2d0b1936-4f82-4ec3-a3b5-7c3c8cd6cc2b
- 3    127 Chirodzo 2016-11-16 00:00:00 uuid:f6d04b41-b539-4e00-868a-0f62b427587d
- 4     51 Chirodzo 2016-11-16 00:00:00 uuid:18ac8e77-bdaf-47ab-85a2-e4c947c9d3ce
- 5     54 Chirodzo 2016-11-16 00:00:00 uuid:273ab27f-9be3-4f3b-83c9-d3e1592de919
- 6     55 Chirodzo 2016-11-16 00:00:00 uuid:883c0433-9891-4121-bc63-744f082c1fa0
- 7     59 Chirodzo 2016-11-16 00:00:00 uuid:1936db62-5732-45dc-98ff-9b3ac7a22518
- 8     56 Chirodzo 2016-11-16 00:00:00 uuid:973c4ac6-f887-48e7-aeaf-4476f2cfab76
- 9     44 Chirodzo 2016-11-17 00:00:00 uuid:f9fadf44-d040-4fca-86c1-2835f79c4952
+ 1     44 Chirodzo 2016-11-17 00:00:00 uuid:f9fadf44-d040-4fca-86c1-2835f79c4952
+ 2     50 Chirodzo 2016-11-16 00:00:00 uuid:4267c33c-53a7-46d9-8bd6-b96f58a4f92c
+ 3     62 Chirodzo 2016-11-16 00:00:00 uuid:c6597ecc-cc2a-4c35-a6dc-e62c71b345d6
+ 4     69 Chirodzo 2016-11-16 00:00:00 uuid:f86933a5-12b8-4427-b821-43c5b039401d
+ 5     51 Chirodzo 2016-11-16 00:00:00 uuid:18ac8e77-bdaf-47ab-85a2-e4c947c9d3ce
+ 6     21 Chirodzo 2016-11-16 00:00:00 uuid:cc7f75c5-d13e-43f3-97e5-4f4c03cb4b12
+ 7    192 Chirodzo 2017-06-03 00:00:00 uuid:f94409a6-e461-4e4c-a6fb-0072d3d58b00
+ 8     10 Chirodzo 2016-12-16 00:00:00 uuid:8f4e49bc-da81-4356-ae34-e0d794a23721
+ 9     43 Chirodzo 2016-11-17 00:00:00 uuid:b4dff49f-ef27-40e5-a9d1-acf287b47358
 10     57 Chirodzo 2016-11-16 00:00:00 uuid:a7184e55-0615-492d-9835-8f44f3b03a71
 ~~~
 {: .output}
@@ -1368,7 +1375,7 @@ interviews_items_owned %>%
 
 
 ~~~
-# A tibble: 3 x 3
+# A tibble: 3 × 3
 # Groups:   village [3]
   village  bicycle     n
   <chr>    <lgl>   <int>
@@ -1396,7 +1403,7 @@ interviews_items_owned %>%
 
 
 ~~~
-# A tibble: 3 x 2
+# A tibble: 3 × 2
   village  mean_items
   <chr>         <dbl>
 1 Chirodzo       4.62
@@ -1442,7 +1449,7 @@ interviews_items_owned %>%
 > > 
 > > 
 > > ~~~
-> > # A tibble: 3 x 2
+> > # A tibble: 3 × 2
 > >   memb_assoc mean_months
 > >   <chr>            <dbl>
 > > 1 no                2   
