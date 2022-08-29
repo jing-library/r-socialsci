@@ -591,7 +591,7 @@ factors (`factor`) and arrays (`array`).
 > > R implicitly converts them to all be the same type.
 > {: .solution}
 >
-> What will happen in each of these examples? (hint: use `class()`
+> What will happen in each of these examples? (hint: use `typeof()`
 > to check the data type of your objects):
 >
 >  
