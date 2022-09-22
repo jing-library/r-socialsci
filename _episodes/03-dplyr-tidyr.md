@@ -1058,16 +1058,16 @@ interviews %>%
 # A tibble: 10 × 4
    key_ID village  interview_date      instanceID                               
     <dbl> <chr>    <dttm>              <chr>                                    
- 1     65 Chirodzo 2016-11-16 00:00:00 uuid:143f7478-0126-4fbc-86e0-5d324339206b
- 2     63 Chirodzo 2016-11-16 00:00:00 uuid:86ed4328-7688-462f-aac7-d6518414526a
- 3     61 Chirodzo 2016-11-16 00:00:00 uuid:2401cf50-8859-44d9-bd14-1bf9128766f2
+ 1    199 Chirodzo 2017-06-04 00:00:00 uuid:ffc83162-ff24-4a87-8709-eff17abc0b3b
+ 2     58 Chirodzo 2016-11-16 00:00:00 uuid:a7a3451f-cd0d-4027-82d9-8dcd1234fcca
+ 3     67 Chirodzo 2016-11-16 00:00:00 uuid:6c15d667-2860-47e3-a5e7-7f679271e419
  4      9 Chirodzo 2016-11-16 00:00:00 uuid:846103d2-b1db-4055-b502-9cd510bb7b37
- 5     21 Chirodzo 2016-11-16 00:00:00 uuid:cc7f75c5-d13e-43f3-97e5-4f4c03cb4b12
- 6     54 Chirodzo 2016-11-16 00:00:00 uuid:273ab27f-9be3-4f3b-83c9-d3e1592de919
- 7     66 Chirodzo 2016-11-16 00:00:00 uuid:a457eab8-971b-4417-a971-2e55b8702816
- 8     60 Chirodzo 2016-11-16 00:00:00 uuid:85465caf-23e4-4283-bb72-a0ef30e30176
- 9     45 Chirodzo 2016-11-17 00:00:00 uuid:e3554d22-35b1-4fb9-b386-dd5866ad5792
-10      8 Chirodzo 2016-11-16 00:00:00 uuid:d6cee930-7be1-4fd9-88c0-82a08f90fb5a
+ 5     63 Chirodzo 2016-11-16 00:00:00 uuid:86ed4328-7688-462f-aac7-d6518414526a
+ 6     70 Chirodzo 2016-11-16 00:00:00 uuid:1feb0108-4599-4bf9-8a07-1f5e66a50a0a
+ 7     64 Chirodzo 2016-11-16 00:00:00 uuid:28cfd718-bf62-4d90-8100-55fafbe45d06
+ 8     43 Chirodzo 2016-11-17 00:00:00 uuid:b4dff49f-ef27-40e5-a9d1-acf287b47358
+ 9     59 Chirodzo 2016-11-16 00:00:00 uuid:1936db62-5732-45dc-98ff-9b3ac7a22518
+10     48 Chirodzo 2016-11-16 00:00:00 uuid:e180899c-7614-49eb-a97c-40ed013a38a2
 ~~~
 {: .output}
 
@@ -1400,7 +1400,7 @@ number of items, so each average is grouped by village.
 
 ~~~
 interviews_items_owned %>%
-    mutate(number_items = rowSums(select(., bicycle:car, -no_items_owned))) %>%
+    mutate(number_items = rowSums(select(., bicycle:motorcyle, fridge:car))) %>%
     group_by(village) %>%
     summarize(mean_items = mean(number_items))
 ~~~
@@ -1409,14 +1409,14 @@ interviews_items_owned %>%
 
 
 ~~~
-Error in `mutate()`:
-! Problem while computing `number_items = rowSums(select(., bicycle:car,
-  -no_items_owned))`.
-Caused by error in `select()`:
-! Can't subset columns that don't exist.
-✖ Column `no_items_owned` doesn't exist.
+# A tibble: 3 × 2
+  village  mean_items
+  <chr>         <dbl>
+1 Chirodzo       4.54
+2 God            3.98
+3 Ruaca          5.57
 ~~~
-{: .error}
+{: .output}
 
 > ## Exercise
 >
@@ -1509,21 +1509,9 @@ interviews_plotting <- interviews %>%
               values_fill = list(months_lack_food_logical = FALSE)) %>%
   ## add some summary columns
   mutate(number_months_lack_food = rowSums(select(., Jan:May))) %>%
-  mutate(number_items = rowSums(select(., bicycle:car, -no_items_owned)))
+  mutate(number_items = rowSums(select(., bicycle:motorcyle, fridge:car)))
 ~~~
 {: .language-r}
-
-
-
-~~~
-Error in `mutate()`:
-! Problem while computing `number_items = rowSums(select(., bicycle:car,
-  -no_items_owned))`.
-Caused by error in `select()`:
-! Can't subset columns that don't exist.
-✖ Column `no_items_owned` doesn't exist.
-~~~
-{: .error}
 
 Now we can save this dataframe to our `data_output` directory.
 
@@ -1534,9 +1522,5 @@ write_csv (interviews_plotting, file = "data_output/interviews_plotting.csv")
 {: .language-r}
 
 
-~~~
-Error in is.data.frame(x): object 'interviews_plotting' not found
-~~~
-{: .error}
 
 {% include links.md %}
